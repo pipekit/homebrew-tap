@@ -5,20 +5,20 @@
 class Cli < Formula
   desc "Pipekit CLI"
   homepage "https://pipekit.io/"
-  version "0.13.2"
+  version "0.13.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/pipekit/cli/releases/download/v0.13.2/cli_0.13.2_Darwin_arm64.tar.gz"
-      sha256 "dfc9757ecde6830073cf60e17e32d35bf799cc0239b8869c9168eacc09e94d0d"
+      url "https://github.com/pipekit/cli/releases/download/v0.13.3/cli_0.13.3_Darwin_arm64.tar.gz"
+      sha256 "f22f2714455ee053296adf522e752915c8a26a06ad7f541613ad92a466bc7ec5"
 
       def install
         bin.install "pipekit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pipekit/cli/releases/download/v0.13.2/cli_0.13.2_Darwin_x86_64.tar.gz"
-      sha256 "c2b0930add37d5dccb08bbc750aafe6e88c7d6a8a462fd4a43378578275a4751"
+      url "https://github.com/pipekit/cli/releases/download/v0.13.3/cli_0.13.3_Darwin_x86_64.tar.gz"
+      sha256 "64c66eed0e55406ffe6952d8c57fca71682ff88412055f224dcbc61a744b910b"
 
       def install
         bin.install "pipekit"
@@ -28,16 +28,16 @@ class Cli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pipekit/cli/releases/download/v0.13.2/cli_0.13.2_Linux_arm64.tar.gz"
-      sha256 "0ab343a42c76a65b1cd5a34444c8322f9f361536b36b7631492524a1e03b3f64"
+      url "https://github.com/pipekit/cli/releases/download/v0.13.3/cli_0.13.3_Linux_arm64.tar.gz"
+      sha256 "476aa38f33e66663091037e789455598c47c436883f3fe8809f2e170d0914356"
 
       def install
         bin.install "pipekit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pipekit/cli/releases/download/v0.13.2/cli_0.13.2_Linux_x86_64.tar.gz"
-      sha256 "99e5f78ae0065f073f53db485e81dd1e4deb1aec22f3faaaef1f4b91096b4835"
+      url "https://github.com/pipekit/cli/releases/download/v0.13.3/cli_0.13.3_Linux_x86_64.tar.gz"
+      sha256 "5b053950ee5f1d0d7b6c99428cedd94a3b68db42dac169fa68fac47e897492a5"
 
       def install
         bin.install "pipekit"
