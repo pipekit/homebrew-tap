@@ -5,20 +5,20 @@
 class Cli < Formula
   desc "Pipekit CLI"
   homepage "https://pipekit.io/"
-  version "0.14.16"
+  version "0.14.17"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/pipekit/cli/releases/download/v0.14.16/cli_0.14.16_darwin_arm64.tar.gz"
-      sha256 "54307caaf1038036ee9dbcd6f014a5bf9f3b489c6c3ac40f0cd4b31b2f5e1fc0"
+      url "https://github.com/pipekit/cli/releases/download/v0.14.17/cli_0.14.17_darwin_arm64.tar.gz"
+      sha256 "6fa1f6be42a4e1483b01f857ecfec8a0af1b78ca2d434e9552bf53c5e594b2f8"
 
       def install
         bin.install "pipekit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pipekit/cli/releases/download/v0.14.16/cli_0.14.16_darwin_amd64.tar.gz"
-      sha256 "383c84fb1f88b793d756d4d0efd3d43505eaef3b5376a5a39bdcf1a173b1b117"
+      url "https://github.com/pipekit/cli/releases/download/v0.14.17/cli_0.14.17_darwin_amd64.tar.gz"
+      sha256 "0a5d042dbf4b4d26dd794aa18cf9de4ff094da35d7701ca4087057b1f242d3ee"
 
       def install
         bin.install "pipekit"
@@ -28,16 +28,16 @@ class Cli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pipekit/cli/releases/download/v0.14.16/cli_0.14.16_linux_arm64.tar.gz"
-      sha256 "2e98e238c11c31ed557691ca848074880d9426f45c4bff588a32c3d967a7b65c"
+      url "https://github.com/pipekit/cli/releases/download/v0.14.17/cli_0.14.17_linux_arm64.tar.gz"
+      sha256 "9ce9838fd9d66eb55330f067cfb49a3a6acab1b93763f0a5eb302f1e4bfeb7eb"
 
       def install
         bin.install "pipekit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pipekit/cli/releases/download/v0.14.16/cli_0.14.16_linux_amd64.tar.gz"
-      sha256 "b38505660882df3e21571b0a8b461b09c280a78254ecfb141955420b8fd4c3ee"
+      url "https://github.com/pipekit/cli/releases/download/v0.14.17/cli_0.14.17_linux_amd64.tar.gz"
+      sha256 "8f266556b6929a3bdca91697ad9888b3a4c531aa48b225423b297766f4973de8"
 
       def install
         bin.install "pipekit"
