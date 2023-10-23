@@ -5,20 +5,20 @@
 class Cli < Formula
   desc "Pipekit CLI"
   homepage "https://pipekit.io/"
-  version "0.18.17"
+  version "0.19.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/pipekit/cli/releases/download/v0.18.17/cli_0.18.17_darwin_arm64.tar.gz"
-      sha256 "0f51e46fe8e593cdd84349a6ce6ebc9c719d1a3cfc21f8a368967ae5833f2b01"
+      url "https://github.com/pipekit/cli/releases/download/v0.19.0/cli_0.19.0_darwin_arm64.tar.gz"
+      sha256 "b04d031b99aef4550212a009918c0584227e45992e85126fe51d78444aafcc63"
 
       def install
         bin.install "pipekit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pipekit/cli/releases/download/v0.18.17/cli_0.18.17_darwin_amd64.tar.gz"
-      sha256 "ea50b8a3ec3b381488df26c6a13def763009963bdc0e0e51fb529bb638c5e8c9"
+      url "https://github.com/pipekit/cli/releases/download/v0.19.0/cli_0.19.0_darwin_amd64.tar.gz"
+      sha256 "1626b2235f30916fd0edc7bf2d38a3cd661a70626b49035ec52df2496d71c016"
 
       def install
         bin.install "pipekit"
@@ -28,16 +28,16 @@ class Cli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pipekit/cli/releases/download/v0.18.17/cli_0.18.17_linux_arm64.tar.gz"
-      sha256 "ba4d081b7650513952cdcd911dae1bf66ab87a93e3c4449c517209387e6dc06a"
+      url "https://github.com/pipekit/cli/releases/download/v0.19.0/cli_0.19.0_linux_arm64.tar.gz"
+      sha256 "8e9855676ade3c5939f2ad32ccf84cc14e7e88e87110f3e0d3a9850968493503"
 
       def install
         bin.install "pipekit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pipekit/cli/releases/download/v0.18.17/cli_0.18.17_linux_amd64.tar.gz"
-      sha256 "f388742f4a49130bd6f5f22010072629699d003fcfd7854be94f7f76bc0498cd"
+      url "https://github.com/pipekit/cli/releases/download/v0.19.0/cli_0.19.0_linux_amd64.tar.gz"
+      sha256 "9ae62855c901864bd58ca34a17cf7297c32019704dd366a5cca984e9db68bd38"
 
       def install
         bin.install "pipekit"
