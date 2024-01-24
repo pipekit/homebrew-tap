@@ -5,20 +5,20 @@
 class Cli < Formula
   desc "Pipekit CLI"
   homepage "https://pipekit.io/"
-  version "0.28.1"
+  version "0.28.5"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/pipekit/cli/releases/download/v0.28.1/cli_0.28.1_darwin_arm64.tar.gz"
-      sha256 "be6146a436d505245d5f0482d78f395f78589def30b674eb543847775b814364"
+      url "https://github.com/pipekit/cli/releases/download/v0.28.5/cli_0.28.5_darwin_arm64.tar.gz"
+      sha256 "315fd405d9618481c2f58d6d61623f68f6a664ff7d0923fe7228724fa473e60c"
 
       def install
         bin.install "pipekit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pipekit/cli/releases/download/v0.28.1/cli_0.28.1_darwin_amd64.tar.gz"
-      sha256 "ac214f7bb62e2e2f0ef6d545061aa3e5d73df412bf3fae370ae4eefbda8966e3"
+      url "https://github.com/pipekit/cli/releases/download/v0.28.5/cli_0.28.5_darwin_amd64.tar.gz"
+      sha256 "271d6a2fcc6ee92d1c9db65bbc92284c89278559674dd28f66eeba57262eaca0"
 
       def install
         bin.install "pipekit"
@@ -28,16 +28,16 @@ class Cli < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pipekit/cli/releases/download/v0.28.1/cli_0.28.1_linux_arm64.tar.gz"
-      sha256 "f67566b21a2158ab3e1c202d2929a88e2c3dc6da42680a66c96a3ef27e5c68f9"
+      url "https://github.com/pipekit/cli/releases/download/v0.28.5/cli_0.28.5_linux_arm64.tar.gz"
+      sha256 "ce8baa6ddd0659af7c00fa162ea34e284f80b5616dc3e0190f463cc2b9ab7c16"
 
       def install
         bin.install "pipekit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pipekit/cli/releases/download/v0.28.1/cli_0.28.1_linux_amd64.tar.gz"
-      sha256 "8072a1cebef8ee67f71d1e4845d5a194a6b8be72c6c32e2789d3d5c053facb4b"
+      url "https://github.com/pipekit/cli/releases/download/v0.28.5/cli_0.28.5_linux_amd64.tar.gz"
+      sha256 "5bc5ae6a0838a66625d5d239391ec772a39052f1a9b91decbe5e00e5b942bc40"
 
       def install
         bin.install "pipekit"
