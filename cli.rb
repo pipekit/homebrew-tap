@@ -5,20 +5,20 @@
 class Cli < Formula
   desc "Pipekit CLI"
   homepage "https://pipekit.io/"
-  version "1.1.2"
+  version "1.2.10"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pipekit/cli/releases/download/v1.1.2/cli_1.1.2_darwin_amd64.tar.gz"
-      sha256 "665aabc143473645e5535066cda5bcf978677d29165c2a7c1e3ce749747eaf18"
+      url "https://github.com/pipekit/cli/releases/download/v1.2.10/cli_1.2.10_darwin_amd64.tar.gz"
+      sha256 "9e251e4853ec85e04005123b81db37ae2e2b4132285783b8a48011bbe0de3928"
 
       def install
         bin.install "pipekit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pipekit/cli/releases/download/v1.1.2/cli_1.1.2_darwin_arm64.tar.gz"
-      sha256 "751bdf5944747968c7385b0cbc1c39e509ac1220973484d7dfe3206e10bc3a8e"
+      url "https://github.com/pipekit/cli/releases/download/v1.2.10/cli_1.2.10_darwin_arm64.tar.gz"
+      sha256 "081353017e31331caea0e40cf065c6c2db088de550c904d6440319d98d9f20b6"
 
       def install
         bin.install "pipekit"
@@ -28,16 +28,16 @@ class Cli < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/pipekit/cli/releases/download/v1.1.2/cli_1.1.2_linux_amd64.tar.gz"
-      sha256 "76a7cc76568e3f5073ed986c9c12acd8fa3b0db03393fe8d6ec8704c8918b022"
+      url "https://github.com/pipekit/cli/releases/download/v1.2.10/cli_1.2.10_linux_amd64.tar.gz"
+      sha256 "52131710e4163002b30287f2c046b5c5d8661e9c0bb90c4d75d5e7b2bb93f1a5"
 
       def install
         bin.install "pipekit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pipekit/cli/releases/download/v1.1.2/cli_1.1.2_linux_arm64.tar.gz"
-      sha256 "24681f83a23b5594ec93ba55fa8ab607acbc1952cebe6ef6eeddc0abb969f274"
+      url "https://github.com/pipekit/cli/releases/download/v1.2.10/cli_1.2.10_linux_arm64.tar.gz"
+      sha256 "8c7fcf2dbe558538eda7fb3373a1171a2b1f9d659adead297632204fcfe364d2"
 
       def install
         bin.install "pipekit"
