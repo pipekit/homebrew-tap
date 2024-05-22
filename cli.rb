@@ -5,20 +5,20 @@
 class Cli < Formula
   desc "Pipekit CLI"
   homepage "https://pipekit.io/"
-  version "1.4.1"
+  version "1.5.11"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/pipekit/cli/releases/download/v1.4.1/cli_1.4.1_darwin_amd64.tar.gz"
-      sha256 "b3a19b6b5aa48423dfbde76bee77b030132393f50471b1b802698aa398551cd7"
+    on_intel do
+      url "https://github.com/pipekit/cli/releases/download/v1.5.11/cli_1.5.11_darwin_amd64.tar.gz"
+      sha256 "306970afb99b80264790f2530190869b00fabf1dcebdf13bd906f4ffc487fa9f"
 
       def install
         bin.install "pipekit"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/pipekit/cli/releases/download/v1.4.1/cli_1.4.1_darwin_arm64.tar.gz"
-      sha256 "f224c528f1b5c9f3047a9b871ac6137f82eec8afc519f29859afa4f5857d6369"
+    on_arm do
+      url "https://github.com/pipekit/cli/releases/download/v1.5.11/cli_1.5.11_darwin_arm64.tar.gz"
+      sha256 "9d21946db4d0ba273838e1fd1505c3cc283cb9672bd97681111678d5b9fa01e1"
 
       def install
         bin.install "pipekit"
@@ -27,20 +27,24 @@ class Cli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/pipekit/cli/releases/download/v1.4.1/cli_1.4.1_linux_amd64.tar.gz"
-      sha256 "e2a7145ba8722f3200ffd4c41ebba4f0586e38277b05be6054868679c2ac982e"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/pipekit/cli/releases/download/v1.5.11/cli_1.5.11_linux_amd64.tar.gz"
+        sha256 "799269a99686e15fa15ea87f4631ac5426fa06e3af29d46cae95f4ccc9a3f7ea"
 
-      def install
-        bin.install "pipekit"
+        def install
+          bin.install "pipekit"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pipekit/cli/releases/download/v1.4.1/cli_1.4.1_linux_arm64.tar.gz"
-      sha256 "9228d8e2f990c65e8bdf933f8f689b8095990e676294ea522278ed3424ee9f5a"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/pipekit/cli/releases/download/v1.5.11/cli_1.5.11_linux_arm64.tar.gz"
+        sha256 "b502fa814f7f1d029710bdfdeda5709cf9c146b4fd9e60edadab708eea2dc845"
 
-      def install
-        bin.install "pipekit"
+        def install
+          bin.install "pipekit"
+        end
       end
     end
   end
