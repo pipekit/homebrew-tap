@@ -5,20 +5,20 @@
 class Cli < Formula
   desc "Pipekit CLI"
   homepage "https://pipekit.io/"
-  version "4.26.1"
+  version "4.26.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pipekit/cli/releases/download/v4.26.1/cli_4.26.1_darwin_amd64.tar.gz"
-      sha256 "837e8008eb7ff1c8e4edd8bd3bb446a5ea576695225107c664e30f913dab9fc8"
+      url "https://github.com/pipekit/cli/releases/download/v4.26.2/cli_4.26.2_darwin_amd64.tar.gz"
+      sha256 "541c27d13f3a6294553e8e9d7071a59426454073c5bae728d41ad949860cf3f9"
 
       def install
         bin.install "pipekit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pipekit/cli/releases/download/v4.26.1/cli_4.26.1_darwin_arm64.tar.gz"
-      sha256 "81606f7da5c6684f985b038a109984b7c580275a84c55d4c796940457472fe98"
+      url "https://github.com/pipekit/cli/releases/download/v4.26.2/cli_4.26.2_darwin_arm64.tar.gz"
+      sha256 "6ab9a23656b39bb2c32643d41fa814d7e8b3c6abfe46f2330a3e36134c9673b9"
 
       def install
         bin.install "pipekit"
@@ -29,8 +29,8 @@ class Cli < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pipekit/cli/releases/download/v4.26.1/cli_4.26.1_linux_amd64.tar.gz"
-        sha256 "c9afe99ee45c5b9ee9fee0af1b16b2b0af3c8e76a578c6886ebdf4f62a48abb4"
+        url "https://github.com/pipekit/cli/releases/download/v4.26.2/cli_4.26.2_linux_amd64.tar.gz"
+        sha256 "75921a7c9611f25d58c831e01a20df438d4ed9d66613dbf88b21dfb0c0e48905"
 
         def install
           bin.install "pipekit"
@@ -39,8 +39,8 @@ class Cli < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/pipekit/cli/releases/download/v4.26.1/cli_4.26.1_linux_arm64.tar.gz"
-        sha256 "b1e67dea281cdb37a4e2167ee1c59b91e812bd4243f58bebb47091aa3a372734"
+        url "https://github.com/pipekit/cli/releases/download/v4.26.2/cli_4.26.2_linux_arm64.tar.gz"
+        sha256 "a1fffba00766131af202cd0d5f9825cf7c8d7b868ad5566695b6f008c9f5ad02"
 
         def install
           bin.install "pipekit"
