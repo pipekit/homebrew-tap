@@ -5,20 +5,20 @@
 class Cli < Formula
   desc "Pipekit CLI"
   homepage "https://pipekit.io/"
-  version "4.26.4"
+  version "4.26.7"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pipekit/cli/releases/download/v4.26.4/cli_4.26.4_darwin_amd64.tar.gz"
-      sha256 "3891f0b1fef1bc6fa97d3f45694fb8fa96ac0ee6235fbb0aea9dc8192ee613b9"
+      url "https://github.com/pipekit/cli/releases/download/v4.26.7/cli_4.26.7_darwin_amd64.tar.gz"
+      sha256 "609f6287e8ae0f50aa37262cb75665cd823645f1d07646638a62c9ed8309ee89"
 
       def install
         bin.install "pipekit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pipekit/cli/releases/download/v4.26.4/cli_4.26.4_darwin_arm64.tar.gz"
-      sha256 "0de3a86ec1887b825dccba4ce15f03abb1e196a40c07402463522e617436c46a"
+      url "https://github.com/pipekit/cli/releases/download/v4.26.7/cli_4.26.7_darwin_arm64.tar.gz"
+      sha256 "df1340c36058c8b85b693c6c85276cbb49e2cf9b42234a1086b7889e064213ac"
 
       def install
         bin.install "pipekit"
@@ -27,24 +27,18 @@ class Cli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/pipekit/cli/releases/download/v4.26.4/cli_4.26.4_linux_amd64.tar.gz"
-        sha256 "75b4241c6e7b922985660f0e0242ad801208a834a12e161f6cfed8f3351a2a58"
-
-        def install
-          bin.install "pipekit"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/pipekit/cli/releases/download/v4.26.7/cli_4.26.7_linux_amd64.tar.gz"
+      sha256 "d545dd5d73775a5ff5774e3cadf5e20082373bef69f51e32bbfb1d6d8be01ded"
+      def install
+        bin.install "pipekit"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/pipekit/cli/releases/download/v4.26.4/cli_4.26.4_linux_arm64.tar.gz"
-        sha256 "7778d8327c09687bafffe96e7dc763a242a204a7fd530e7a3d0edb0ea3adb721"
-
-        def install
-          bin.install "pipekit"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/pipekit/cli/releases/download/v4.26.7/cli_4.26.7_linux_arm64.tar.gz"
+      sha256 "2d8c8abc4d27f497d3e7d6306f547432385a4cf68a69f454e144aaeda11fd659"
+      def install
+        bin.install "pipekit"
       end
     end
   end
