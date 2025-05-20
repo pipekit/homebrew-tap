@@ -5,20 +5,20 @@
 class Cli < Formula
   desc "Pipekit CLI"
   homepage "https://pipekit.io/"
-  version "5.1.3"
+  version "5.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pipekit/cli/releases/download/v5.1.3/cli_5.1.3_darwin_amd64.tar.gz"
-      sha256 "c41e68dda49852fb3bdcce325b5bac840e22cd089f6691c77e5854d424d2b776"
+      url "https://github.com/pipekit/cli/releases/download/v5.2.0/cli_5.2.0_darwin_amd64.tar.gz"
+      sha256 "dc0a507e1b7ec27c74c1d2ba916fa2cfa6dc5e8b68bafaf6cc51bf11b7ef7285"
 
       def install
         bin.install "pipekit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pipekit/cli/releases/download/v5.1.3/cli_5.1.3_darwin_arm64.tar.gz"
-      sha256 "510e2b364c6e4991d563cbf93f1d56da51055603110f24f797537571c3eb6946"
+      url "https://github.com/pipekit/cli/releases/download/v5.2.0/cli_5.2.0_darwin_arm64.tar.gz"
+      sha256 "9a64621771f1f7dfa806a26865e6b7b444abd91b24bc8d7dcd356ce59893aa48"
 
       def install
         bin.install "pipekit"
@@ -28,15 +28,15 @@ class Cli < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/pipekit/cli/releases/download/v5.1.3/cli_5.1.3_linux_amd64.tar.gz"
-      sha256 "759c383a998f324d8684a36f787727b96dc0d886d01bb5e8c5c0563c6c7cc0af"
+      url "https://github.com/pipekit/cli/releases/download/v5.2.0/cli_5.2.0_linux_amd64.tar.gz"
+      sha256 "bf64955f4c3fee52339803c8d7f441fb4d057d76a18c8ef82ba438939e2a699d"
       def install
         bin.install "pipekit"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/pipekit/cli/releases/download/v5.1.3/cli_5.1.3_linux_arm64.tar.gz"
-      sha256 "7a2b3adb1b97bd8085888b1e4c2223554c08d65e3470bba148ddbfa588c3b1f6"
+      url "https://github.com/pipekit/cli/releases/download/v5.2.0/cli_5.2.0_linux_arm64.tar.gz"
+      sha256 "b97b5465e45a9c016a95d6bec9b94f26b9df044aa77eaf30af0b6ab1a3384e04"
       def install
         bin.install "pipekit"
       end
