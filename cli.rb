@@ -5,20 +5,20 @@
 class Cli < Formula
   desc "Pipekit CLI"
   homepage "https://pipekit.io/"
-  version "6.7.9"
+  version "6.7.10"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pipekit/cli/releases/download/v6.7.9/cli_6.7.9_darwin_amd64.tar.gz"
-      sha256 "39d9527220f60bf089ddacb42d08afb607b2785225b0269c950511c6315e8c12"
+      url "https://github.com/pipekit/cli/releases/download/v6.7.10/cli_6.7.10_darwin_amd64.tar.gz"
+      sha256 "cf0a89d3299e05dd0c48fb6e9bb817435f03fe873ff11be177a718a16a876378"
 
       def install
         bin.install "pipekit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pipekit/cli/releases/download/v6.7.9/cli_6.7.9_darwin_arm64.tar.gz"
-      sha256 "0c72fc3482ed4bfb757148698e074790a13887412ad730d369720e420d487c46"
+      url "https://github.com/pipekit/cli/releases/download/v6.7.10/cli_6.7.10_darwin_arm64.tar.gz"
+      sha256 "225aa406aeff96030ee62f003ece30e8a94f84e8858af78ba31dd16afa49c7d4"
 
       def install
         bin.install "pipekit"
@@ -28,15 +28,15 @@ class Cli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pipekit/cli/releases/download/v6.7.9/cli_6.7.9_linux_amd64.tar.gz"
-      sha256 "1ffad6a8b30cf8c1efdb30ef9e350d1ba1785e70a770a305cbc0a9e0f253c881"
+      url "https://github.com/pipekit/cli/releases/download/v6.7.10/cli_6.7.10_linux_amd64.tar.gz"
+      sha256 "18f533dca6cd3d4b2ea6d099c0b015030737845f1edfda524737e9699d2dd87c"
       def install
         bin.install "pipekit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pipekit/cli/releases/download/v6.7.9/cli_6.7.9_linux_arm64.tar.gz"
-      sha256 "32b7fbe7588c81828bbe689c748636aaad8969004367dc46bd3ef13bac980e94"
+      url "https://github.com/pipekit/cli/releases/download/v6.7.10/cli_6.7.10_linux_arm64.tar.gz"
+      sha256 "31159f95f7e1005771a282b75c328c39b412e9b8997c1e8ea312c9d77c0bec42"
       def install
         bin.install "pipekit"
       end
