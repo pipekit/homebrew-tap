@@ -5,20 +5,20 @@
 class Cli < Formula
   desc "Pipekit CLI"
   homepage "https://pipekit.io/"
-  version "6.9.5"
+  version "6.9.6"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pipekit/cli/releases/download/v6.9.5/cli_6.9.5_darwin_amd64.tar.gz"
-      sha256 "dcccbfb09775f45e0a4a8f391b579a11425d7d2093ce991ad49b898d52d5c54e"
+      url "https://github.com/pipekit/cli/releases/download/v6.9.6/cli_6.9.6_darwin_amd64.tar.gz"
+      sha256 "f237b7557ca659312da22c8b4d09b4792d839d9b9b828e2f813c094a9bd2d57b"
 
       def install
         bin.install "pipekit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pipekit/cli/releases/download/v6.9.5/cli_6.9.5_darwin_arm64.tar.gz"
-      sha256 "724ca05110773be10d1f739de7aaea78289f86a219fb3a1924c88890c56d1aac"
+      url "https://github.com/pipekit/cli/releases/download/v6.9.6/cli_6.9.6_darwin_arm64.tar.gz"
+      sha256 "0225723a32266bdc620cdd1ca2c24a65a6147d8db4253c0d79ab468b9a921e8d"
 
       def install
         bin.install "pipekit"
@@ -28,15 +28,15 @@ class Cli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pipekit/cli/releases/download/v6.9.5/cli_6.9.5_linux_amd64.tar.gz"
-      sha256 "7e22fe1b28d7f839b38de8504fc40b688f06babe3d2dc17a554c581433fbcd90"
+      url "https://github.com/pipekit/cli/releases/download/v6.9.6/cli_6.9.6_linux_amd64.tar.gz"
+      sha256 "f96608e62cff39335a392f68a6f5a67cf3dc206242a9a63ed921dd54c4d7c7e6"
       def install
         bin.install "pipekit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pipekit/cli/releases/download/v6.9.5/cli_6.9.5_linux_arm64.tar.gz"
-      sha256 "23eb3e940b83ef24871f8009e8b0e3cc71e152aefb179776b2a86cd9e77f9c5d"
+      url "https://github.com/pipekit/cli/releases/download/v6.9.6/cli_6.9.6_linux_arm64.tar.gz"
+      sha256 "5622c1d30333dc3d1104ba54cecc7791fab14217034fd79ea9825f166a399fa3"
       def install
         bin.install "pipekit"
       end
