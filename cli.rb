@@ -5,20 +5,20 @@
 class Cli < Formula
   desc "Pipekit CLI"
   homepage "https://pipekit.io/"
-  version "6.38.1"
+  version "6.39.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pipekit/cli/releases/download/v6.38.1/cli_6.38.1_darwin_amd64.tar.gz"
-      sha256 "328ea0a49dc2fe071c26958910bd564cc3ef3bfd177db34cd3490f49a35dd138"
+      url "https://github.com/pipekit/cli/releases/download/v6.39.1/cli_6.39.1_darwin_amd64.tar.gz"
+      sha256 "5188cd9d4e51b46d459e006f5502c4f1e05968a402f887100132b979fea82d22"
 
       def install
         bin.install "pipekit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pipekit/cli/releases/download/v6.38.1/cli_6.38.1_darwin_arm64.tar.gz"
-      sha256 "d965871fda0c7b422960bab4b90d300c95e525c62a30d69e7f41710b60ffc94a"
+      url "https://github.com/pipekit/cli/releases/download/v6.39.1/cli_6.39.1_darwin_arm64.tar.gz"
+      sha256 "ac4358f881927f6f785b90a75218f6801462e9f2ffbdbb1fbdc7f2d43406e7b1"
 
       def install
         bin.install "pipekit"
@@ -28,15 +28,15 @@ class Cli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pipekit/cli/releases/download/v6.38.1/cli_6.38.1_linux_amd64.tar.gz"
-      sha256 "cb9538480809f86037f4f7224a125778593bc1ca5157ed9ba8a91831d002a9f4"
+      url "https://github.com/pipekit/cli/releases/download/v6.39.1/cli_6.39.1_linux_amd64.tar.gz"
+      sha256 "d8bc6709a2fee6f7ed06d11b4963236141520e892c32795f827164db6362095b"
       def install
         bin.install "pipekit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pipekit/cli/releases/download/v6.38.1/cli_6.38.1_linux_arm64.tar.gz"
-      sha256 "f54a423fcb5b9356d14d6637b7a5f51a3c3cda2de0c2c66733aa75f6327aaf78"
+      url "https://github.com/pipekit/cli/releases/download/v6.39.1/cli_6.39.1_linux_arm64.tar.gz"
+      sha256 "80b2a4132aa7a13601f76ae35ab939564f3763453567530d54b102d9f2750468"
       def install
         bin.install "pipekit"
       end
