@@ -5,22 +5,22 @@
 class Cli < Formula
   desc "Pipekit CLI"
   homepage "https://pipekit.io/"
-  version "6.48.1"
+  version "6.48.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pipekit/cli/releases/download/v6.48.1/cli_6.48.1_darwin_amd64.tar.gz"
-      sha256 "4da8cd3261db16edb242d3f2edb032527f808d0a8e83771dbef99477f61a53c5"
+      url "https://github.com/pipekit/cli/releases/download/v6.48.2/cli_6.48.2_darwin_amd64.tar.gz"
+      sha256 "637da260e4c9ea36fa1f78320de032da329c9fb9b26f2fc0357d8b0529b8a48c"
 
-      def install
+      define_method(:install) do
         bin.install "pipekit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pipekit/cli/releases/download/v6.48.1/cli_6.48.1_darwin_arm64.tar.gz"
-      sha256 "0fbced4814342839a185aea9755d3179de1fc6d5c7b6ee527fff1ed21a291bff"
+      url "https://github.com/pipekit/cli/releases/download/v6.48.2/cli_6.48.2_darwin_arm64.tar.gz"
+      sha256 "d53b2e4c08ac1507030e41fb6c020cd7bf09f5e33334137f2308d314ca0f77a4"
 
-      def install
+      define_method(:install) do
         bin.install "pipekit"
       end
     end
@@ -28,16 +28,16 @@ class Cli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pipekit/cli/releases/download/v6.48.1/cli_6.48.1_linux_amd64.tar.gz"
-      sha256 "43cc1d5e9289b1f194382332352721e7affeba0d5ab212bfc0b1980329ddd516"
-      def install
+      url "https://github.com/pipekit/cli/releases/download/v6.48.2/cli_6.48.2_linux_amd64.tar.gz"
+      sha256 "fb097c9d52f2295b83969ff37caa3cd35d14b3dad8d8fe21c2204520ed8a42d7"
+      define_method(:install) do
         bin.install "pipekit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pipekit/cli/releases/download/v6.48.1/cli_6.48.1_linux_arm64.tar.gz"
-      sha256 "e1a49fa04efb76fe2d21cb94b0ee04188082f9428e076c89ef8389368cd66ed0"
-      def install
+      url "https://github.com/pipekit/cli/releases/download/v6.48.2/cli_6.48.2_linux_arm64.tar.gz"
+      sha256 "aa38872d34c079027059972561f198e1cd9209719d0d25dac0347022e98cced1"
+      define_method(:install) do
         bin.install "pipekit"
       end
     end
