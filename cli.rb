@@ -5,20 +5,20 @@
 class Cli < Formula
   desc "Pipekit CLI"
   homepage "https://pipekit.io/"
-  version "7.1.0"
+  version "7.2.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pipekit/cli/releases/download/v7.1.0/cli_7.1.0_darwin_amd64.tar.gz"
-      sha256 "fe87018ce483f94c7b70ee7afe067db88cd9e8e89b2ec24991f84909be695700"
+      url "https://github.com/pipekit/cli/releases/download/v7.2.1/cli_7.2.1_darwin_amd64.tar.gz"
+      sha256 "fb21b47fe1e6ea2ef526d82ba282e6077c92523561bf218c1d4e6856014318ed"
 
       define_method(:install) do
         bin.install "pipekit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pipekit/cli/releases/download/v7.1.0/cli_7.1.0_darwin_arm64.tar.gz"
-      sha256 "d66d3cd27b05fc252a47141c96944bdcb305a4f9fee6a9916e029814b10542af"
+      url "https://github.com/pipekit/cli/releases/download/v7.2.1/cli_7.2.1_darwin_arm64.tar.gz"
+      sha256 "e30fbc187b6f23aee6fd45c90820d50df3b24529a0e274c735bd65d35e9b1ca5"
 
       define_method(:install) do
         bin.install "pipekit"
@@ -28,15 +28,15 @@ class Cli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pipekit/cli/releases/download/v7.1.0/cli_7.1.0_linux_amd64.tar.gz"
-      sha256 "a73774811870b433af269c9c0093eefdee60a8d0dc8646445220dad343e748d4"
+      url "https://github.com/pipekit/cli/releases/download/v7.2.1/cli_7.2.1_linux_amd64.tar.gz"
+      sha256 "ead16d1a47df24b5eb0664b3c63dd5936958639e2e8486af1f06d5429368a3a4"
       define_method(:install) do
         bin.install "pipekit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pipekit/cli/releases/download/v7.1.0/cli_7.1.0_linux_arm64.tar.gz"
-      sha256 "b17868142f003621b4895f76fe2e91acf5076ca0570f2070f0d1b1ea89965f46"
+      url "https://github.com/pipekit/cli/releases/download/v7.2.1/cli_7.2.1_linux_arm64.tar.gz"
+      sha256 "ad97588ca68ea5ab9bc34baf7b115590c2215563d046d3e1f34a357991ac9f26"
       define_method(:install) do
         bin.install "pipekit"
       end
